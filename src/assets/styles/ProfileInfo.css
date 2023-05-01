@@ -1,11 +1,15 @@
 .m0 {
-    margin: 0;
+  margin: 0;
 }
 
 .bg-dark {
-    background-color: #171515;
+  background-color: #171515;
 }
 
 .color-white {
-    color: white;
+  color: white;
+}
+
+.rounded {
+  border-radius: 1rem;
 }

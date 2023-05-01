@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Row, Col, Spin } from "antd";
 import { Searchbar } from "./Searchbar";
 import { User } from "../types/User";
+import { UserProfile } from "./UserProfile";
 
 export const Main = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -20,6 +21,7 @@ export const Main = () => {
         ) : (
           user !== undefined && (
             <Col span={24} lg={15}>
+              <UserProfile {...user} />
             </Col>
           )
         )}
