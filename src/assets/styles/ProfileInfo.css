@@ -6,6 +6,10 @@
   background-color: #171515;
 }
 
+.bg-darker {
+    background-color: #2a2828;
+}
+
 .color-white {
   color: white;
 }

@@ -1,7 +1,7 @@
 import { User } from "../types/User";
 import { Card, Row, Col, Image, Divider, Tag, Space, Button } from "antd";
 import "../assets/styles/ProfileInfo.css";
-import { CaretRightOutlined } from "@ant-design/icons";
+import { GithubOutlined } from "@ant-design/icons";
 
 export const UserInfo = (user: User) => {
   const handleClick = () => {
@@ -61,8 +61,8 @@ export const UserInfo = (user: User) => {
             <Col>
               <Button
                 onClick={handleClick}
-                shape="round"
-                icon={<CaretRightOutlined />}
+                shape="circle"
+                icon={<GithubOutlined onClick={handleClick} />}
               />
             </Col>
           </Row>
