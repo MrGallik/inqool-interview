@@ -21,12 +21,18 @@ export const Repositories = ({ repos }: RepositoryProps) => {
     >
       <Row>
         <Col span={24}>
-          <Space direction="vertical" size='middle' style={{ width: '100%' }}>
+          <Space direction="vertical" size="middle" style={{ width: "100%" }}>
             {reposToShow.map((repo) => (
               <RepositoryItem key={repo.id} {...repo} />
             ))}
-            <Row justify='center'>
-              <Button type='ghost' onClick={handleShowAll} className="color-white">{showAll ? 'show less' : 'show more'}</Button>
+            <Row justify="center">
+              <Button
+                type="ghost"
+                onClick={handleShowAll}
+                className="color-white"
+              >
+                {showAll ? "show less" : "show more"}
+              </Button>
             </Row>
           </Space>
         </Col>

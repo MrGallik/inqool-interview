@@ -9,5 +9,5 @@ export const UserProfile = (user: User) => {
         <UserInfo {...user} />
       </Col>
     </Row>
-  )
-}
+  );
+};

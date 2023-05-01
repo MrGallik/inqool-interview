@@ -4,7 +4,7 @@ import { Searchbar } from "./Searchbar";
 import { User } from "../types/User";
 import { UserProfile } from "./UserProfile";
 import { Repositories } from "./Repositories";
-import '../assets/styles/ProfileInfo.css'
+import "../assets/styles/ProfileInfo.css";
 import { Repository } from "../types/Repository";
 
 export const Main = () => {
@@ -16,7 +16,11 @@ export const Main = () => {
     <>
       <Row justify="center">
         <Col span={24} lg={15}>
-          <Searchbar setUser={setUser} setRepos={setRepos} setIsLoading={setIsLoading} />
+          <Searchbar
+            setUser={setUser}
+            setRepos={setRepos}
+            setIsLoading={setIsLoading}
+          />
         </Col>
       </Row>
       <Row justify="center">
@@ -25,9 +29,13 @@ export const Main = () => {
         ) : (
           user !== undefined && (
             <Col span={24} lg={15}>
-              <Space direction="vertical" size='large' style={{ width: '100%' }}>
+              <Space
+                direction="vertical"
+                size="large"
+                style={{ width: "100%" }}
+              >
                 <UserProfile {...user} />
-                {repos !== undefined && <Repositories repos={repos}/>}
+                {repos !== undefined && <Repositories repos={repos} />}
               </Space>
             </Col>
           )

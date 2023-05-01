@@ -1,5 +1,5 @@
 import { User } from "../types/User";
-import { Card, Row, Col, Image, Divider, Tag, Space, Button } from "antd";
+import { Card, Row, Col, Image, Tag, Button } from "antd";
 import "../assets/styles/ProfileInfo.css";
 import { GithubOutlined } from "@ant-design/icons";
 
