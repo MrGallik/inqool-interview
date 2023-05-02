@@ -32,13 +32,15 @@ export const Repositories = ({ repos }: RepositoryProps) => {
               <Empty message="repositories" />
             )}
             <Row justify="center">
-              <Button
-                type="ghost"
-                onClick={handleShowAll}
-                className="color-white"
-              >
-                {showAll ? "show less" : "show more"}
-              </Button>
+              {repos.length > 3 && (
+                <Button
+                  type="ghost"
+                  onClick={handleShowAll}
+                  className="color-white"
+                >
+                  {showAll ? "show less" : "show more"}
+                </Button>
+              )}
             </Row>
           </Space>
         </Col>
