@@ -18,6 +18,7 @@ export const Repositories = ({ repos }: RepositoryProps) => {
   return (
     <Card
       title={<h2 className="color-white">Repositories</h2>}
+      bordered={false}
       className="bg-dark color-white rounded"
     >
       <Row>

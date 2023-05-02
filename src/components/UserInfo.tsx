@@ -8,7 +8,7 @@ export const UserInfo = (user: User) => {
   };
 
   return (
-    <Card className="bg-dark rounded">
+    <Card bordered={false} className="bg-dark rounded">
       <Row>
         <Col flex="200px" xs={{ flex: "150px" }}>
           <Image className="rounded" src={user.avatar_url} />

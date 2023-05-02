@@ -59,10 +59,13 @@ export const Searchbar = (props: SearchbarProps) => {
   };
 
   return (
-    <Form.Item help={error}>
+    <Form.Item
+      help={error}
+      className="mt-2"
+    >
       <Input.Search
         size="large"
-        placeholder="input search text"
+        placeholder="input username"
         onSearch={handleSearch}
         status={error === "" ? "" : "error"}
         enterButton

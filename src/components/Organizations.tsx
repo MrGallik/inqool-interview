@@ -11,6 +11,7 @@ export const Organizations = ({ orgs }: OrganizationsProps) => {
   return (
     <Card
       title={<h2 className="color-white">Organizations</h2>}
+      bordered={false}
       className="bg-dark color-white rounded"
     >
       <Space direction="vertical" size="middle" style={{ width: "100%" }}>

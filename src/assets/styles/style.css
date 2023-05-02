@@ -1,5 +1,13 @@
+body {
+  background-color: #2a2828;
+}
+
 .m0 {
   margin: 0;
+}
+
+.mt-2 {
+  margin-top: 2rem;
 }
 
 .bg-dark {
