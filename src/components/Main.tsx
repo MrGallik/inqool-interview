@@ -4,7 +4,7 @@ import { Searchbar } from "./Searchbar";
 import { User } from "../types/User";
 import { UserProfile } from "./UserProfile";
 import { Repositories } from "./Repositories";
-import "../assets/styles/ProfileInfo.css";
+import "../assets/styles/style.css";
 import { Repository } from "../types/Repository";
 import { Organization } from "../types/Organization";
 import { Organizations } from "./Organizations";
