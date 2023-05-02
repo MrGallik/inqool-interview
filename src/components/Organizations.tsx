@@ -14,11 +14,11 @@ export const Organizations = ({ orgs }: OrganizationsProps) => {
       className="bg-dark color-white rounded"
     >
       <Space direction="vertical" size="middle" style={{ width: "100%" }}>
-        {
-        orgs.length !== 0
-        ? orgs.map((org) => (<OrganizationItem {...org} key={org.id} />))
-        : <Empty message="organizations" />
-        }
+        {orgs.length !== 0 ? (
+          orgs.map((org) => <OrganizationItem {...org} key={org.id} />)
+        ) : (
+          <Empty message="organizations" />
+        )}
       </Space>
     </Card>
   );
