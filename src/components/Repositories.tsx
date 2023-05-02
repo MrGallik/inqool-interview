@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card, Space, Row, Col, Button } from "antd";
 import { Repository } from "../types/Repository";
 import { RepositoryItem } from "./RepositoryItem";
+import { Empty } from "./Empty";
 
 type RepositoryProps = {
   repos: Repository[];
@@ -22,9 +23,11 @@ export const Repositories = ({ repos }: RepositoryProps) => {
       <Row>
         <Col span={24}>
           <Space direction="vertical" size="middle" style={{ width: "100%" }}>
-            {reposToShow.map((repo) => (
-              <RepositoryItem key={repo.id} {...repo} />
-            ))}
+            {
+            repos.length !== 0
+            ? reposToShow.map((repo) => (<RepositoryItem key={repo.id} {...repo} />))
+            : <Empty message="repositories" />
+            }
             <Row justify="center">
               <Button
                 type="ghost"
