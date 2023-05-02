@@ -6,11 +6,14 @@ import { UserProfile } from "./UserProfile";
 import { Repositories } from "./Repositories";
 import "../assets/styles/ProfileInfo.css";
 import { Repository } from "../types/Repository";
+import { Organization } from "../types/Organization";
+import { Organizations } from "./Organizations";
 
 export const Main = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [user, setUser] = useState(undefined as User | undefined);
-  const [repos, setRepos] = useState(undefined as [Repository] | undefined);
+  const [repos, setRepos] = useState(undefined as Repository[] | undefined);
+  const [orgs, setOrgs] = useState([] as Organization[] | undefined);
 
   return (
     <>
@@ -19,6 +22,7 @@ export const Main = () => {
           <Searchbar
             setUser={setUser}
             setRepos={setRepos}
+            setOrgs={setOrgs}
             setIsLoading={setIsLoading}
           />
         </Col>
@@ -36,6 +40,7 @@ export const Main = () => {
               >
                 <UserProfile {...user} />
                 {repos !== undefined && <Repositories repos={repos} />}
+                {orgs !== undefined && <Organizations orgs={orgs} />}
               </Space>
             </Col>
           )
